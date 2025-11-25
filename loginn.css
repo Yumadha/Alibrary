@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    background: white;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-panel {
+    position: relative;
+    width: 45%;
+    overflow: hidden; /* agar SVG tidak overflow */
+    font-family: 'League Spartan', sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SVG sebagai background */
+.curve-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+/* Konten di atas SVG */
+.content-left {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.logo-wrapper {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #5c5c5c 60%, transparent 90%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+.logo-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+}
+
+.right-panel {
+    width: 55%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.login-form {
+    width: 80%;
+    max-width: 350px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 28px;
+    color: #0087A9;
+}
+
+.subtitle {
+    margin: 12px 0 24px;
+    font-size: 16px;
+    color: #000;
+}
+
+.login-form label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #000;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 14px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 12px;
+    background: #A9A9A9;
+    color: #444;
+    outline: none;
+    font-weight: 500;
+}
+
+.login-form input::placeholder {
+    color: #6e6e6e;
+}
+
+.btn-submit {
+    background-color: #0087A9;
+    color: white;
+    font-weight: 700;
+    padding: 12px 0;
+    width: 180px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    margin-top: 10px;
+}
+
+.register-text {
+    position: absolute;
+    bottom: 25px;
+    font-size: 16px;
+}
+
+.register-link {
+    background: linear-gradient(90deg, #0087A9, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    /* Optional untuk smooth rendering */
+    background-clip: text;
+    color: transparent;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-panel, .right-panel {
+        width: 100%;
+        height: 50vh;
+    }
+    .register-text {
+        position: relative;
+        bottom: auto;
+    }
+}

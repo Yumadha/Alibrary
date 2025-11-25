@@ -1,0 +1,142 @@
+/* style.css */
+
+/* Reset dan font dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container utama */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Bagian kiri (logo dan latar biru) */
+
+.logo-image {
+    width: 200px;
+    height: 190px;
+}
+
+.logo-text {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Bagian kanan (form) */
+.right-side {
+    flex: 1;
+    background-color: #ffffff; /* Putih */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #666;
+}
+
+/* Form styling */
+form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #f8f9fa; /* Putih rada abu-abu */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="url"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    text-align: center; /* Input center (teks di tengah) */
+    background-color: #fff;
+}
+
+select {
+    text-align: left; /* Untuk select, biarkan left-aligned */
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+.back-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .left-side, .right-side {
+        flex: none;
+        width: 100%;
+    }
+    
+    .right-side {
+        padding: 20px;
+    }
+}
